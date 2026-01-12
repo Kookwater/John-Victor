@@ -381,3 +381,34 @@ footer {
         column-count: 1;
     }
 }
+/* Treatment Section Updates */
+.goal-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cost-breakdown {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.cost-breakdown ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cost-breakdown li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+}
+
+.cost-breakdown li:last-child {
+    border-bottom: none;
+}
+
+/* Margin Utility */
+.mt-4 { margin-top: 3rem; }
+.m-auto { margin-left: auto; margin-right: auto; }
