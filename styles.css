@@ -326,12 +326,13 @@ footer {
         margin-left: 0;
     }
 }
+
 /* Photo of John */
 .john-photo {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -339,24 +340,44 @@ footer {
     transform: scale(1.02);
 }
 
-/* Photo Memories Gallery */
-.photo-memories {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1.5rem;
+/* Photo Gallery Gallery */
+.gallery-grid {
+    column-count: 3;
+    column-gap: 1.5rem;
 }
 
-.photo-memories .thumb {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.photo-memories .thumb:hover {
-    transform: translateY(-5px) scale(1.05);
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        column-count: 1;
+    }
 }
